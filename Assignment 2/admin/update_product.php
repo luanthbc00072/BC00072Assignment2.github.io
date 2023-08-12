@@ -29,11 +29,11 @@ if(!empty($_POST)){
         $tenhang = $_POST['tenhang'];
 
     
-        $sql = 'update sanpham 
+        $sqli = 'update sanpham
         set tensp = "'.$name.'",gia = '.$gia.',hinhanh = "'.$hinhanh.'" ,kichthuoc = "'.$kichthuoc.'",chieucaoyen = "'.$chieucaoyen.'",sizebanh = "'.$kichthuocbanh.'",engine = "'.$dongco.'",CC = "'.$cc.'",congsuat = "'.$congsuat.'",CCnhot = "'.$ccnhot.'",CCxang = "'.$ccxang.'",phanh = "'.$phanh.'" ,gear = "'.$hopso.'",tenhang = "'.$tenhang.'" 
         where id = '.$id.'';
 
-        execute($sql);
+        execute($sqli);
         header('Location: product.php?tenhang='.$tenhang.'');
         die();
     }
